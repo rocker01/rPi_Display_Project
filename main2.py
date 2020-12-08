@@ -26,7 +26,7 @@ epd.init(epd.FULL_UPDATE)
 font15 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 15)
 font16 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 16)
 font24 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 24)
-font18 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 18)
+font18 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 20)
 
 
 image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
@@ -50,13 +50,9 @@ canNewCases = str(r['CAN']['data'][-1]['new_cases'])[:-2]
 usaCases = str(r['USA']['data'][-1]['total_cases'])[:-2]
 usaNewCases = str(r['USA']['data'][-1]['new_cases'])[:-2]
 
-omnCases = str(r['OMN']['data'][-1]['total_cases'])[:-2]
-omnNewCases = str(r['OMN']['data'][-1]['new_cases'])[:-2]
-
 draw.text((0, 0), 'CAN ' + canCases + ' +' + canNewCases, font=font18, fill=0)
-draw.text((0, 20), 'IND ' + indCases + ' +' + indNewCases, font=font18, fill=0)
-draw.text((0, 40), 'USA ' + usaCases + ' +' + usaNewCases, font=font18, fill=0)
-draw.text((0, 60), 'OMN ' + omnCases + ' +' + omnNewCases, font=font18, fill=0)
+draw.text((0, 30), 'IND ' + indCases + ' +' + indNewCases, font=font18, fill=0)
+draw.text((0, 60), 'USA ' + usaCases + ' +' + usaNewCases, font=font18, fill=0)
 
 
 draw.text((0, 80), time.strftime("%H:%M:%S   %Y-%m-%d"), font=font16, fill=0)
