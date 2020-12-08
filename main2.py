@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+#code adapted by Manu Narang
 import sys
 import os
 import socket
