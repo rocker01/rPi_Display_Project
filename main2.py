@@ -52,7 +52,7 @@ usaNewCases = str(r['USA']['data'][-1]['new_cases'])[:-2]
 
 draw.text((0, 0), 'IND ' + indCases + ' +' + indNewCases, font=font16, fill=0)
 draw.text((0, 20), 'CAN ' + canCases + ' +' + canNewCases, font=font16, fill=0)
-draw.text((0, 40), 'CAN ' + usaCases + ' +' + usaNewCases, font=font16, fill=0)
+draw.text((0, 40), 'USA ' + usaCases + ' +' + usaNewCases, font=font16, fill=0)
 
 
 draw.text((0, 70), time.strftime("%H:%M:%S %Y-%m-%d"), font=font16, fill=0)
