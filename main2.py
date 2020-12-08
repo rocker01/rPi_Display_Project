@@ -32,7 +32,7 @@ hostName = socket.gethostname()
 ipAddress = socket.gethostbyname(hostName)
 ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet " | cut -d " " -f10')
 
-draw.text((0, 0), 'Manu is trying hard', font=font24, fill=0)
+draw.text((0, 0), 'Testing 123', font=font24, fill=0)
 draw.text((0, 25), hostName, font=font24, fill=0)
 draw.text((0, 50), ipAddress2, font=font24, fill=0)
 draw.text((0, 75), time.asctime(), font=font15, fill=0)
