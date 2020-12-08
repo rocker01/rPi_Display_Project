@@ -23,6 +23,8 @@ epd.init(epd.FULL_UPDATE)
 
 font15 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 15)
 font24 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 24)
+font18 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 18)
+
 
 image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
 
@@ -32,9 +34,9 @@ hostName = socket.gethostname()
 ipAddress = socket.gethostbyname(hostName)
 ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet " | cut -d " " -f10')
 
-draw.text((0, 0), 'Hello!', font=font24, fill=0)
-draw.text((0, 25), hostName + ' ' + ipAddress2, font=font24, fill=0)
-draw.text((0, 50), time.strftime("%H:%M:%S %Y-%m-%d"), font=font24, fill=0)
+draw.text((0, 0), 'Hello!', font=font18, fill=0)
+draw.text((0, 25), hostName + ' ' + ipAddress2, font=font18, fill=0)
+draw.text((0, 50), time.strftime("%H:%M:%S %Y-%m-%d"), font=font18, fill=0)
 
 
 epd.display(epd.getbuffer(image))
