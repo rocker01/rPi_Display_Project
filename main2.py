@@ -35,7 +35,7 @@ ipAddress = socket.gethostbyname(hostName)
 ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet " | cut -d " " -f10')
 
 draw.text((0, 0), 'Hello! I\'m ' + hostName, font=font18, fill=0)
-draw.text((0, 35), 'Aditya' + '   ' + ipAddress2, font=font18, fill=0)
+draw.text((0, 35), 'Preeti' + '   ' + ipAddress2, font=font18, fill=0)
 draw.text((0, 70), time.strftime("%H:%M:%S %Y-%m-%d"), font=font18, fill=0)
 
 
