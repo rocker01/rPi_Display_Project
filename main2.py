@@ -4,6 +4,7 @@
 import sys
 import os
 import socket
+import commands
 
 picdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'pic')
 libdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'lib')
@@ -28,9 +29,12 @@ draw = ImageDraw.Draw(image)
 
 hostName = socket.gethostname()
 ipAddress = socket.gethostbyname(hostName)
+ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet\ addr" | cut -d: -f2 | cut -d" " -f1')
 
-draw.text((0, 0), 'KYRA IS A GOOD GIRL', font=font24, fill=0)
-draw.text((0, 30), hostName, font=font24, fill=0)
-draw.text((0, 60), ipAddress, font=font24, fill=0)
+draw.text((0, 0), 'Manu is trying hard', font=font24, fill=0)
+draw.text((0, 25), hostName, font=font24, fill=0)
+draw.text((0, 50), ipAddress, font=font24, fill=0)
+draw.text((0, 75), ipAddress2, font=font24, fill=0)
+
 epd.display(epd.getbuffer(image))
 
