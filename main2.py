@@ -35,6 +35,8 @@ ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet " | cut -d " " -f10
 draw.text((0, 0), 'Manu is trying hard', font=font24, fill=0)
 draw.text((0, 25), hostName, font=font24, fill=0)
 draw.text((0, 50), ipAddress2, font=font24, fill=0)
+draw.text((0, 50), time.asctime(), font=font24, fill=0)
+
 
 epd.display(epd.getbuffer(image))
 
