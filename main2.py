@@ -59,7 +59,7 @@ draw.text((0, 40), 'USA ' + usaCases + ' +' + usaNewCases, font=font18, fill=0)
 draw.text((0, 60), 'OMN ' + omnCases + ' +' + omnNewCases, font=font18, fill=0)
 
 
-draw.text((0, 70), time.strftime("%H:%M:%S   %Y-%m-%d"), font=font16, fill=0)
+draw.text((0, 80), time.strftime("%H:%M:%S   %Y-%m-%d"), font=font16, fill=0)
 
 
 epd.display(epd.getbuffer(image))
