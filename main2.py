@@ -50,9 +50,13 @@ canNewCases = str(r['CAN']['data'][-1]['new_cases'])[:-2]
 usaCases = str(r['USA']['data'][-1]['total_cases'])[:-2]
 usaNewCases = str(r['USA']['data'][-1]['new_cases'])[:-2]
 
-draw.text((0, 0), 'IND ' + indCases + ' +' + indNewCases, font=font18, fill=0)
-draw.text((0, 20), 'CAN ' + canCases + ' +' + canNewCases, font=font18, fill=0)
+omnCases = str(r['OMN']['data'][-1]['total_cases'])[:-2]
+omnNewCases = str(r['OMN']['data'][-1]['new_cases'])[:-2]
+
+draw.text((0, 0), 'CAN ' + canCases + ' +' + canNewCases, font=font18, fill=0)
+draw.text((0, 20), 'IND ' + indCases + ' +' + indNewCases, font=font18, fill=0)
 draw.text((0, 40), 'USA ' + usaCases + ' +' + usaNewCases, font=font18, fill=0)
+draw.text((0, 60), 'OMN ' + omnCases + ' +' + omnNewCases, font=font18, fill=0)
 
 
 draw.text((0, 70), time.strftime("%H:%M:%S   %Y-%m-%d"), font=font16, fill=0)
