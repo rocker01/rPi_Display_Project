@@ -40,14 +40,14 @@ URL = "https://covid.ourworldindata.org/data/owid-covid-data.json"
 
 r = requests.get(url = URL).json()
 
-indCases = r['IND']['data'][-1]['total_cases']
-indNewCases = r['IND']['data'][-1]['new_cases']
+indCases = str(r['IND']['data'][-1]['total_cases'])
+indNewCases = str(r['IND']['data'][-1]['new_cases'])
 
-canCases = r['CAN']['data'][-1]['total_cases']
-canNewCases = r['CAN']['data'][-1]['new_cases']
+canCases = str(r['CAN']['data'][-1]['total_cases'])
+canNewCases = str(r['CAN']['data'][-1]['new_cases'])
 
-usaCases = r['USA']['data'][-1]['total_cases']
-usaNewCases = r['USA']['data'][-1]['new_cases']
+usaCases = str(r['USA']['data'][-1]['total_cases'])
+usaNewCases = str(r['USA']['data'][-1]['new_cases'])
 
 draw.text((0, 0), 'IND ' + indCases + ' +' + indNewCases, font=font15, fill=0)
 draw.text((0, 20), 'CAN ' + canCases + ' +' + canNewCases, font=font15, fill=0)
