@@ -42,10 +42,10 @@ try:
     draw.pieslice((55, 60, 95, 100), 270, 360, fill=0)
     draw.polygon([(110, 0), (110, 50), (150, 25)], outline=0)
     draw.polygon([(190, 0), (190, 50), (150, 25)], fill=0)
-    draw.text((120, 60), 'e-Paper demo', font=font15, fill=0)
-    draw.text((110, 90), u'微雪电子', font=font24, fill=0)
+    draw.text((120, 60), 'Kyra Narang', font=font15, fill=0)
+    draw.text((110, 90), 'KYRA', font=font24, fill=0)
     epd.display(epd.getbuffer(image))
-    time.sleep(2)
+    time.sleep(20)
 
     # read bmp file
     logging.info("2.read bmp file...")
