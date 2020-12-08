@@ -17,8 +17,8 @@ import time
 from PIL import Image, ImageDraw, ImageFont
 
 epd = epd2in13_V2.EPD()
-#epd.init(epd.FULL_UPDATE)
-epd.Clear(0xFF)
+epd.init(epd.FULL_UPDATE)
+#epd.Clear(0xFF)
 
 font15 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 15)
 font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
