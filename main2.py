@@ -24,6 +24,7 @@ epd.init(epd.FULL_UPDATE)
 #
 
 font15 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 15)
+font16 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 16)
 font24 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 24)
 font18 = ImageFont.truetype(os.path.join(picdir, 'Monaco.ttf'), 18)
 
@@ -40,21 +41,21 @@ URL = "https://covid.ourworldindata.org/data/owid-covid-data.json"
 
 r = requests.get(url = URL).json()
 
-indCases = str(r['IND']['data'][-1]['total_cases'])
-indNewCases = str(r['IND']['data'][-1]['new_cases'])
+indCases = str(r['IND']['data'][-1]['total_cases'])[:-2]
+indNewCases = str(r['IND']['data'][-1]['new_cases'])[:-2]
 
-canCases = str(r['CAN']['data'][-1]['total_cases'])
-canNewCases = str(r['CAN']['data'][-1]['new_cases'])
+canCases = str(r['CAN']['data'][-1]['total_cases'])[:-2]
+canNewCases = str(r['CAN']['data'][-1]['new_cases'])[:-2]
 
-usaCases = str(r['USA']['data'][-1]['total_cases'])
-usaNewCases = str(r['USA']['data'][-1]['new_cases'])
+usaCases = str(r['USA']['data'][-1]['total_cases'])[:-2]
+usaNewCases = str(r['USA']['data'][-1]['new_cases'])[:-2]
 
-draw.text((0, 0), 'IND ' + indCases + ' +' + indNewCases, font=font15, fill=0)
-draw.text((0, 20), 'CAN ' + canCases + ' +' + canNewCases, font=font15, fill=0)
-draw.text((0, 40), 'CAN ' + usaCases + ' +' + usaNewCases, font=font15, fill=0)
+draw.text((0, 0), 'IND ' + indCases + ' +' + indNewCases, font=font16, fill=0)
+draw.text((0, 20), 'CAN ' + canCases + ' +' + canNewCases, font=font16, fill=0)
+draw.text((0, 40), 'CAN ' + usaCases + ' +' + usaNewCases, font=font16, fill=0)
 
 
-draw.text((0, 70), time.strftime("%H:%M:%S %Y-%m-%d"), font=font15, fill=0)
+draw.text((0, 70), time.strftime("%H:%M:%S %Y-%m-%d"), font=font16, fill=0)
 
 
 epd.display(epd.getbuffer(image))
