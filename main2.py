@@ -32,10 +32,9 @@ hostName = socket.gethostname()
 ipAddress = socket.gethostbyname(hostName)
 ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet " | cut -d " " -f10')
 
-draw.text((0, 0), 'Testing 123', font=font24, fill=0)
-draw.text((0, 25), hostName, font=font24, fill=0)
-draw.text((0, 50), ipAddress2, font=font24, fill=0)
-draw.text((0, 75), time.strftime("%Y-%m-%d %H:%M:%S"), font=font24, fill=0)
+draw.text((0, 0), 'Hello!', font=font24, fill=0)
+draw.text((0, 25), hostName & ' ' & ipAddress2, font=font24, fill=0)
+draw.text((0, 50), time.strftime("%Y-%m-%d %H:%M:%S"), font=font24, fill=0)
 
 
 epd.display(epd.getbuffer(image))
