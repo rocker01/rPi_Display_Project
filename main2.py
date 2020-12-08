@@ -4,7 +4,7 @@
 import sys
 import os
 import socket
-import commands
+#import commands
 import requests
 
 
@@ -34,7 +34,7 @@ draw = ImageDraw.Draw(image)
 
 hostName = socket.gethostname()
 ipAddress = socket.gethostbyname(hostName)
-ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet " | cut -d " " -f10')
+#ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet " | cut -d " " -f10')
 
 URL = "https://covid.ourworldindata.org/data/owid-covid-data.json"
 
