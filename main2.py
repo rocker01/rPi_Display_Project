@@ -29,7 +29,7 @@ draw = ImageDraw.Draw(image)
 
 hostName = socket.gethostname()
 ipAddress = socket.gethostbyname(hostName)
-ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet\ addr" | cut -d: -f2 | cut -d" " -f1')
+ipAddress2 = commands.getoutput('ifconfig wlan0 | grep "inet " | cut -d " " -f10')
 
 draw.text((0, 0), 'Manu is trying hard', font=font24, fill=0)
 draw.text((0, 25), hostName, font=font24, fill=0)
